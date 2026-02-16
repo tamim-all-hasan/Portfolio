@@ -1,12 +1,12 @@
-const filterBtn = document.querySelector('.filter-btn');
-const filterOptions = document.querySelector('.filter-options');
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-filterBtn.addEventListener('click', () => {
-  filterOptions.style.display = filterOptions.style.display === 'block' ? 'none' : 'block';
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
 });
 
 window.addEventListener('click', (e) => {
-  if (!filterBtn.contains(e.target) && !filterOptions.contains(e.target)) {
-    filterOptions.style.display = 'none';
+  if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+    navLinks.classList.remove('active');
   }
 });
