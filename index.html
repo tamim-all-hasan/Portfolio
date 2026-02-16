@@ -1,91 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Md Tamim | Portfolio</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md Tamim Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
+  <!-- NAVBAR -->
   <nav class="navbar">
-    <h2 class="logo">Tamim</h2>
+    <div class="logo">Md Tamim</div>
+
+    <!-- Desktop Links -->
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
+    <!-- Mobile Hamburger -->
+    <div class="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
   </nav>
-</header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Md Tamim</h1>
-    <h2>Software Engineer • Psychology Explorer</h2>
-    <p>I build structured digital systems while studying human behavior and philosophy.</p>
-    <a href="#projects" class="btn">View Projects</a>
-  </div>
-</section>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to My Portfolio</h1>
+      <h2>Web Developer & Designer</h2>
+      <p>Building professional digital experiences with clean code.</p>
+      <a href="#projects" class="btn">View Projects</a>
+    </div>
+  </section>
 
-<section id="about" class="section">
-  <h2>About Me</h2>
-  <p>
-    I'm a developer focused on clean architecture, structured thinking,
-    and building meaningful digital products. I enjoy combining logic,
-    psychology, and philosophy into practical systems.
-  </p>
-</section>
+  <!-- ABOUT SECTION -->
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <p>Write something about yourself...</p>
+  </section>
 
-<section id="skills" class="section">
-  <h2>Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-card">HTML</div>
-    <div class="skill-card">CSS</div>
-    <div class="skill-card">JavaScript</div>
-    <div class="skill-card">React</div>
-    <div class="skill-card">Node.js</div>
-    <div class="skill-card">Git & GitHub</div>
-  </div>
-</section>
+  <!-- PROJECTS SECTION -->
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <a href="#">Project 1</a>
+    </div>
+    <div class="project-card">
+      <a href="#">Project 2</a>
+    </div>
+  </section>
 
-<section id="projects" class="section">
-  <h2>Projects</h2>
+  <!-- CONTACT SECTION -->
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p>Email / Phone / Contact Form</p>
+  </section>
 
-  <div class="project-card">
-    <h3>Project One</h3>
-    <p>Short description of what problem it solves and what technologies were used.</p>
-    <a href="#">GitHub</a>
-  </div>
+  <footer>
+    &copy; 2026 Md Tamim. All Rights Reserved.
+  </footer>
 
-  <div class="project-card">
-    <h3>Project Two</h3>
-    <p>Short description of what problem it solves and what technologies were used.</p>
-    <a href="#">GitHub</a>
-  </div>
-
-  <div class="project-card">
-    <h3>Project Three</h3>
-    <p>Short description of what problem it solves and what technologies were used.</p>
-    <a href="#">GitHub</a>
-  </div>
-
-</section>
-
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <p>Email: mdtamimallhasantuhin@gmail.com</p>
-  <p>GitHub: github.com/https://tamim-all-hasan.github.io</p>
-</section>
-
-<footer>
-  <p>© 2026 Md Tamim. Built with focus.</p>
-</footer>
-
-<script src="script.js"></script>
-
+  <!-- JS -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
