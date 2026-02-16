@@ -14,10 +14,11 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 10%;
   position: fixed;
   width: 100%;
-  background: rgba(15,23,42,0.9); /* subtle transparency only */
+  background: rgba(15,23,42,0.9);
   z-index: 1000;
 }
 
@@ -25,29 +26,62 @@ body {
   font-weight: 700;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+/* ---------- NAVBAR FILTER / DROPDOWN ---------- */
+.nav-filter {
+  position: relative;
+  display: inline-block;
 }
 
-.nav-links a {
+.filter-btn {
+  background: transparent;
+  color: #f1f5f9;
+  font-weight: 500;
+  border: 1px solid #38bdf8;
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-options {
+  display: none; /* hidden by default */
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #1e293b;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  min-width: 120px;
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.filter-options li {
+  padding: 8px 15px;
+}
+
+.filter-options li a {
   text-decoration: none;
   color: #f1f5f9;
-  font-weight: 400;
+  display: block;
 }
 
-/* ---------- HERO SECTION CLEAR & MOBILE READY ---------- */
+.filter-options li:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+/* ---------- HERO SECTION ---------- */
 .hero {
   height: 100vh;
   position: relative;
-  background: url('assets/canva.png') no-repeat center center/cover; /* fully clear */
+  background: url('assets/canva.png') no-repeat center center/cover;
   display: flex;
-  flex-direction: column; /* stack content vertically */
-  justify-content: center; /* center vertically */
-  align-items: center; /* center horizontally */
-  text-align: center; /* text centered */
-  padding: 0 5%; /* reduce side padding on mobile */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 5%;
 }
 
 .hero-content h1 {
@@ -141,10 +175,6 @@ footer {
   .btn {
     padding: 8px 16px;
     font-size: 0.9rem;
-  }
-
-  .nav-links {
-    display: none;
   }
 
   .hero {
