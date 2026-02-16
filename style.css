@@ -1,3 +1,4 @@
+/* ---------- GENERAL ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,7 @@ body {
   line-height: 1.6;
 }
 
+/* ---------- NAVBAR ---------- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -26,55 +28,36 @@ body {
   font-weight: 700;
 }
 
-/* ---------- NAVBAR FILTER / DROPDOWN ---------- */
-.nav-filter {
-  position: relative;
-  display: inline-block;
-}
-
-.filter-btn {
-  background: transparent;
-  color: #f1f5f9;
-  font-weight: 500;
-  border: 1px solid #38bdf8;
-  padding: 5px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.filter-options {
-  display: none; /* hidden by default */
-  position: absolute;
-  top: 120%;
-  left: 0;
-  background: #1e293b;
+.nav-links {
   list-style: none;
-  padding: 10px 0;
-  border-radius: 5px;
-  min-width: 120px;
-  z-index: 1000;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  display: flex;
+  gap: 20px;
 }
 
-.filter-options li {
-  padding: 8px 15px;
-}
-
-.filter-options li a {
+.nav-links a {
   text-decoration: none;
   color: #f1f5f9;
-  display: block;
+  font-weight: 400;
 }
 
-.filter-options li:hover {
-  background: #38bdf8;
-  color: #0f172a;
+/* ---------- HAMBURGER ---------- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }
 
-/* ---------- HERO SECTION ---------- */
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #f1f5f9;
+  border-radius: 2px;
+}
+
+/* ---------- HERO ---------- */
 .hero {
   height: 100vh;
-  position: relative;
   background: url('assets/canva.png') no-repeat center center/cover;
   display: flex;
   flex-direction: column;
@@ -112,6 +95,7 @@ body {
   font-weight: 600;
 }
 
+/* ---------- SECTIONS ---------- */
 .section {
   padding: 100px 10%;
 }
@@ -152,14 +136,46 @@ footer {
   background: #1e293b;
 }
 
-/* ---------- RESPONSIVE ---------- */
-@media(max-width: 1024px) {
-  .hero-content h1 {
-    font-size: 3rem;
-  }
-}
-
+/* ---------- MOBILE RESPONSIVE ---------- */
 @media(max-width: 768px) {
+  .nav-links {
+    display: none; /* hide desktop links */
+    position: absolute;
+    top: 60px;
+    right: 10%;
+    background: #1e293b;
+    flex-direction: column;
+    gap: 0;
+    width: 150px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid #38bdf8;
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    display: block;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero {
+    padding: 50px 5%;
+  }
+
   .hero-content h1 {
     font-size: 2rem;
   }
@@ -175,9 +191,5 @@ footer {
   .btn {
     padding: 8px 16px;
     font-size: 0.9rem;
-  }
-
-  .hero {
-    padding: 50px 5%;
   }
 }
