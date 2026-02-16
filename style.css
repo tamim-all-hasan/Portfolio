@@ -18,7 +18,6 @@ body {
   position: fixed;
   width: 100%;
   background: rgba(15,23,42,0.9); /* subtle transparency only */
-  /* Removed backdrop-filter blur */
   z-index: 1000;
 }
 
@@ -38,19 +37,22 @@ body {
   font-weight: 400;
 }
 
-/* ---------- HERO SECTION CLEAR ---------- */
+/* ---------- HERO SECTION CLEAR & MOBILE READY ---------- */
 .hero {
   height: 100vh;
-  position: relative; /* for future overlays if needed */
-  background: url('assets/canva.png') no-repeat center center/cover; /* completely clear */
+  position: relative;
+  background: url('assets/canva.png') no-repeat center center/cover; /* fully clear */
   display: flex;
-  align-items: center;
-  padding: 0 10%;
+  flex-direction: column; /* stack content vertically */
+  justify-content: center; /* center vertically */
+  align-items: center; /* center horizontally */
+  text-align: center; /* text centered */
+  padding: 0 5%; /* reduce side padding on mobile */
 }
 
 .hero-content h1 {
   font-size: 3.5rem;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* subtle shadow for readability */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
 .hero-content h2 {
@@ -116,14 +118,36 @@ footer {
   background: #1e293b;
 }
 
-/* Responsive */
+/* ---------- RESPONSIVE ---------- */
+@media(max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+}
 
 @media(max-width: 768px) {
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
 
   .nav-links {
     display: none;
+  }
+
+  .hero {
+    padding: 50px 5%;
   }
 }
